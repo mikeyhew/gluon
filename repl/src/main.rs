@@ -1,5 +1,6 @@
 //! REPL for the gluon programming language
 #![doc(html_root_url = "https://docs.rs/gluon_repl/0.4.1")] // # GLUON
+#![feature(nll)]
 
 extern crate app_dirs;
 #[macro_use]
