@@ -324,8 +324,8 @@ fn eval_line_(
                     FutureValue::sync({
                         // Hack to get around borrow-checker. Method-chaining didn't work,
                         // even with #[feature(nll)]. Seems like a bug
-                        let temp = set_globals(&vm, &unpack_pattern, &value.typ, &value.value.as_ref());
-                        temp.and(Ok(value))
+                        set_globals(&vm, &unpack_pattern, &value.typ, &value.value.as_ref())
+                        .and(Ok(value))
                     })
                 })
                 .boxed()
